@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# React Multilanguage Routing
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an example how to use routing with translations with react.
 
-## Available Scripts
+### Used packages
 
-In the project directory, you can run:
+- **React Router**
+  - Package for dealing with routing in react 
+  - installation ```npm install react-router-dom@6```
+- **React Intl**
+  - package provide api to translate texts and format dates 
+  - installation ```npm i -S react-intl```
+- **React Cookie**
+  - Package for dealing with cookies. Last used language is stored in cookies.
+  - installation ```npm install react-cookie```
+  
+### Project structure
+Project is divide into following folders:
+- **components** - contains components mostly used for translations
+  - `LanguageSwitcher` - component switches languages and contains function to adjust pathname
+  - `LocalizedIntl` - extract language from URL and load intl based on it
+  - `LocalizedLanguage` - component to translate and print Not Found message
+  - `DefaultNavigate` - component that navigates from base url(e.g localhost/) into localized url (localhost/en)
+  - `NotFound` - component creates intl and takes language from cookie for not found component
+- **Localization** - contains json files with language mutations - they must be in the format key:value ( should not have nested objects )
+- **utils** - create of the Kontent delivery client object
+- **views**
+  - `About` - about us page
+  - `Home` - home page prints datetime
+  - `Movies` - prints list of movies fetched from  Kontent
+  - `Movie` - display fetched data from Kontent
+  
 
-### `npm start`
+`index.tsx` contains routing and cookies setup and contains top level routing - routes to languages mutation, 404
+`app.tsx` renders language switcher navigation menu and contains routes between views
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Routing tips:
+- in V6 now routes do not depend on position, the route is picked by best match
+- language is stored in cookies in case url is changed to unknown language
 
-### `npm test`
+useful link : https://reactrouter.com/docs/en/v6/upgrading/v5
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How to run
+1. First install packages with `npm install`
+2. Run the project with ` npm run start`

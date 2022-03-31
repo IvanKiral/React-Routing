@@ -1,0 +1,10 @@
+{
+  "locale": "en",
+  "Header.homeLinkTitle": "Home",
+  "Header.aboutLinkTitle": "About us",
+  "Header.contactsLinkTitle": "Movies",
+  "NotFound": "NotFound",
+  "Routing.about-us": "about-us",
+
+  "Path_o-nas": "about-us"
+}

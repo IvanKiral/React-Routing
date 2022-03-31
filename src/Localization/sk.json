@@ -1,0 +1,15 @@
+{
+  "locale": "sk",
+  "Header.homeLinkTitle": "Domov",
+  "Header.aboutLinkTitle": "O nas",
+  "Header.contactsLinkTitle": "Filmy",
+  "NotFound": "Ta nic z toho",
+  "Routing.about-us": "o-nas",
+
+  "Path_about-us": "o-nas",
+
+  "Date.year": "numeric",
+  "Date.month": "long",
+  "Date.day": "numeric",
+  "Date.weekday": "long"
+}
