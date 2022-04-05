@@ -8,5 +8,9 @@
   "NotFound": "NotFound",
   "Routing.about-us": "about-us",
 
-  "Path_o-nas": "about-us"
+  "Path_o-nas": "about-us",
+  "Date.year": "numeric",
+  "Date.month": "long",
+  "Date.day": "numeric",
+  "Date.weekday": "long"
 }

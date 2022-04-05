@@ -13,5 +13,5 @@
   "Date.year": "numeric",
   "Date.month": "long",
   "Date.day": "numeric",
-  "Date.weekday": "long"
+  "Date.weekday": "undefined"
 }
