@@ -1,8 +1,10 @@
 {
   "locale": "sk",
-  "Header.homeLinkTitle": "Domov",
-  "Header.aboutLinkTitle": "O nas",
-  "Header.contactsLinkTitle": "Filmy",
+  "Header": {
+    "homeLinkTitle": "Domov",
+    "aboutLinkTitle": "O nas",
+    "movieLinkTitle": "Filmy"
+  },
   "NotFound": "Ta nic z toho",
   "Routing.about-us": "o-nas",
 

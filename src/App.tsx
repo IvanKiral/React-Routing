@@ -1,22 +1,37 @@
-import React, {useEffect, useState} from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import {
     Link,
     Routes,
-    Router,
-    Route, BrowserRouter, useParams, useLocation, Navigate, Outlet
+    Route, Navigate,
 } from "react-router-dom";
 import {LanguageSwitcher} from "./components/LanguageSwitcher";
-import {AppLanguage} from "./const/app-languages";
-import {FormattedDate, FormattedMessage, useIntl} from "react-intl";
-import {deliveryClient} from "./utils/client";
-import {Elements, IContentItem} from "@kentico/kontent-delivery";
-import {ReactComponent} from "*.svg";
+import {useIntl} from "react-intl";
 import {Home} from "./views/Home";
 import {About} from "./views/About";
 import {Movies} from "./views/Movies";
 import {Movie} from "./views/Movie";
+
+/*
+ Pros:
+  - also easy setup
+  - works well with changing language in URL
+  - Seems to easily work with date
+  - Under Yahoo!
+ Cons:
+   - bigger package size
+   - BSD-3-Clause ?
+ */
+
+/*
+These two licenses are very similar, with the key exception of the BSD 3’s non-endorsement clause,
+which prohibits promotion of any derived work using the name of the license or its authors.
+In addition, the language of the MIT License is simpler and shorter.
+
+If you plan to copy, modify, or distribute any code licensed under BSD, you must include:
+ - The full text of the license
+ - The original copyright notice
+ */
 
 function App() {
     const { formatMessage } = useIntl();
@@ -34,7 +49,7 @@ function App() {
               <Link to={`${formatMessage({id:"Routing.about-us"})}`}>{formatMessage({id:"Header.aboutLinkTitle"})}</Link>
             </li>
             <li>
-              <Link to={`movies`}>{formatMessage({id:"Header.contactsLinkTitle"})}</Link>
+              <Link to={`movies`}>{formatMessage({id:"Header.movieLinkTitle"})}</Link>
             </li>
           </ul>
 

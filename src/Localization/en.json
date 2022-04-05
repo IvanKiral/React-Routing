@@ -1,8 +1,10 @@
 {
   "locale": "en",
-  "Header.homeLinkTitle": "Home",
-  "Header.aboutLinkTitle": "About us",
-  "Header.contactsLinkTitle": "Movies",
+  "Header": {
+    "homeLinkTitle": "Home",
+    "aboutLinkTitle": "About us",
+    "movieLinkTitle": "Movies"
+  },
   "NotFound": "NotFound",
   "Routing.about-us": "about-us",
 

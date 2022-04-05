@@ -10,10 +10,8 @@ export const Movies: React.FC = () => {
 
     useEffect(() => {
         getMovies().then(value => {
-            console.log(value.data.items)
             setMovies(value.data.items);
         });
-        console.log(movies)
     }, [locale])
 
 
@@ -23,13 +21,24 @@ export const Movies: React.FC = () => {
 
     return (
         <div>
-            <h2>{formatMessage({id: "Header.contactsLinkTitle"})}</h2>
+            <h2>{formatMessage({id: "Header.movieLinkTitle"})}</h2>
             <ul>
                 {movies.map(val =>
-                    [<Link to={val.system.codename} key={val.elements.title.value}>{val.elements.title.value}</Link>, <br />]
+                    <CustomLink key={val.system.codename} movie={val} />
                 )}
             </ul>
 
         </div>
     );
+}
+
+interface linkProps{
+    movie: Movie
+}
+
+const CustomLink: React.FC<linkProps> = ({movie}) => {
+    return(
+        <><Link to={movie.system.codename}>{movie.elements.title.value}</Link>, <br /></>
+    )
+
 }

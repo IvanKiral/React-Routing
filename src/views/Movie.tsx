@@ -18,7 +18,6 @@ export const Movie: React.FC = () => {
         getMovie().then(val => {
             setMovie(val?.data.item)
         })
-        console.log(movie)
     }, [codename, locale])
 
     const getMovie = async () => {
