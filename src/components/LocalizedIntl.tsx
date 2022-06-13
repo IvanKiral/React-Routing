@@ -25,7 +25,7 @@ export const LocalizedIntl: React.FC = () => {
 
         if(!Object.keys(messages).includes(lang ?? "")){
             const notFoundLanguage = cookie.lang === undefined ? "en" : cookie.lang
-            navigate(`/${notFoundLanguage}/404`)
+            navigate(`/${notFoundLanguage}/404`, {replace: true})
         } else {
             setCookie("lang", lang);
         }
