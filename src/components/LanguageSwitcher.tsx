@@ -1,6 +1,6 @@
 import {NavLink, useLocation} from "react-router-dom";
 import {AppLanguage} from "../const/app-languages";
-import {messages} from "./LocalizedIntl";
+import {messages} from "./LocalizedApp";
 
 export const LanguageSwitcher: React.FC = () => {
     const { pathname } = useLocation();

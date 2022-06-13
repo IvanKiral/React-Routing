@@ -1,6 +1,6 @@
 import {FormattedDate, FormattedMessage, useIntl} from "react-intl";
 import React from "react";
-import {messages} from "../components/LocalizedIntl";
+import {messages} from "../components/LocalizedApp";
 
 export const Home: React.FC = () => {
     const { locale } = useIntl();
