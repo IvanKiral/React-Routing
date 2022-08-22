@@ -16,12 +16,12 @@ export const Movies: React.FC = () => {
 
 
     const getMovies = async () => {
-        return await deliveryClient.items<Movie>().type("movielanguage").languageParameter(locale).toPromise();
+        return await deliveryClient.items<Movie>().type("movie").languageParameter(locale).toPromise();
     }
 
     return (
         <div>
-            <h2>{formatMessage({id: "Header.movieLinkTitle"})}</h2>
+            <h2>{formatMessage({id: "header_movies_link_title"})}</h2>
             <ul>
                 {movies.map(val =>
                     <CustomLink key={val.system.codename} movie={val} />

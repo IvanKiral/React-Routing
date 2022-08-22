@@ -1,13 +1,11 @@
 {
   "locale": "sk",
-  "Header": {
-    "homeLinkTitle": "Domov",
-    "aboutLinkTitle": "O nas",
-    "movieLinkTitle": "Filmy"
-  },
-  "NotFound": "Ta nic z toho",
+  "header_home_link_title": "Domov",
+  "header_about_link_title": "O nas",
+  "header_movies_link_title": "Filmy",
+  "not_foundFound": "Ta nic z toho",
+  
   "Routing.about-us": "o-nas",
-
   "Path_about-us": "o-nas",
 
   "Date.year": "numeric",

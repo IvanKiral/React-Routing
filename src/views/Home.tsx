@@ -6,7 +6,7 @@ export const Home: React.FC = () => {
     const { locale } = useIntl();
     return (
         <div>
-            <h2><FormattedMessage id="Header.homeLinkTitle" /></h2>
+            <h2><FormattedMessage id="header_home_link_title" /></h2>
             <FormattedDate
                 value={new Date()}
                 year={messages[locale]['Date.year']}

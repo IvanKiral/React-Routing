@@ -21,13 +21,13 @@ function App() {
         <div>
           <ul>
             <li>
-                <Link to={``}>{formatMessage({id:"Header.homeLinkTitle"})}</Link>
+                <Link to={``}>{formatMessage({id:"header_home_link_title"})}</Link>
             </li>
             <li>
-              <Link to={`${formatMessage({id:"Routing.about-us"})}`}>{formatMessage({id:"Header.aboutLinkTitle"})}</Link>
+              <Link to={`${formatMessage({id:"Routing.about-us"})}`}>{formatMessage({id:"header_about_link_title"})}</Link>
             </li>
             <li>
-              <Link to={`movies`}>{formatMessage({id:"Header.movieLinkTitle"})}</Link>
+              <Link to={`movies`}>{formatMessage({id:"header_movies_link_title"})}</Link>
             </li>
           </ul>
 
